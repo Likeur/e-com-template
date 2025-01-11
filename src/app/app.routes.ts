@@ -2,12 +2,23 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path:'',
+        path:'home',
         title:'home',
         loadComponent: () => import("./layout/home/home.component")
     },
     {
+        path:'login',
+        title:'login at ecomtemplate',
+        loadComponent: () => import("./components/auth/login/login.component")
+    },
+    {
+        path:'',
+        redirectTo: 'login',
+        pathMatch: 'full'
+    },
+    {
         path:'**',
+        title:'not found',
         loadComponent: () => import("./components/notfound/notfound.component")
     }
 ];
