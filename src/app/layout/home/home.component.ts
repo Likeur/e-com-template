@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavComponent } from '../../components/nav/nav.component';
+import { HerosectionComponent } from '../../components/herosection/herosection.component';
 
 @Component({
   selector: 'app-home',
-  imports: [NavComponent],
+  imports: [HerosectionComponent],
   templateUrl: './home.component.html',
   styles: ``
 })
