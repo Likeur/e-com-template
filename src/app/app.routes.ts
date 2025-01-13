@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path:'home',
-        title:'home',
+        title:'Ecommerce template',
         loadComponent: () => import("./layout/home/home.component")
     },
     {
