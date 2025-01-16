@@ -1,5 +1,5 @@
 <header
-  class="flex lg:justify-between lg:items-center p-4 rounded-none lg:rounded-md z-50 backdrop-blur-md lg:px-6 sticky top-0 bg-white/5 mb-3"
+  class="flex lg:justify-between lg:items-center p-4 rounded-none lg:rounded-md z-50 backdrop-blur-xl lg:px-6 shadow-sm border sticky top-0 bg-white/5 mb-3"
 >
   <div class="flex items-center gap-4">
     <div>
@@ -39,26 +39,34 @@
           </span>
           <span>Search</span>
         </div>
-        <div class="mt-1">
+        <div class="">
           <p class="kbd">
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="10px"
-                fill="#e8eaed"
-              >
-                <path
-                  d="M260-120q-58 0-99-41t-41-99q0-58 41-99t99-41h60v-160h-60q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99v60h160v-60q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41h-60v160h60q58 0 99 41t41 99q0 58-41 99t-99 41q-58 0-99-41t-41-99v-60H400v60q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T320-260v-60h-60q-25 0-42.5 17.5T200-260q0 25 17.5 42.5T260-200Zm440 0q25 0 42.5-17.5T760-260q0-25-17.5-42.5T700-320h-60v60q0 25 17.5 42.5T700-200ZM400-400h160v-160H400v160ZM260-640h60v-60q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640Zm380 0h60q25 0 42.5-17.5T760-700q0-25-17.5-42.5T700-760q-25 0-42.5 17.5T640-700v60Z"
-                /></svg>
-            </span>
-           <span class="">K</span>
+           
+            <span class="">S</span>
           </p>
         </div>
       </button>
     </div>
     <a routerLink="../login" class="btn variant-ghost sz-md">Account</a>
-    <button class="btn variant-ghost sz-md">Cart</button>
+    <button class="btn variant-ghost sz-md relative">
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-5"
+          
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          />
+        </svg>
+      </span>
+      <span class="absolute right-1 -bottom-1 text-lg">0</span>
+    </button>
   </div>
 </header>
