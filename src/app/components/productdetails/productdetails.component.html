@@ -38,7 +38,7 @@
       </p>
 
       <div class="flex items-center gap-2 mt-8">
-        <button (click)="minusItemNumber()" class="btn variant-outlined size-10 text-2xl">-</button>
+        <button [disabled]="btnIsDisabled()" (click)="minusItemNumber()" class="btn variant-outlined size-10 text-2xl">-</button>
         <div class="size-10 rounded-full bg-white/5 grid place-content-center">
           <span> {{itemsNumber()}} </span>
         </div>

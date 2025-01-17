@@ -11,13 +11,21 @@ import { __values } from 'tslib';
 export class ProductdetailsComponent {
 
   public itemsNumber = signal(1)
+  public btnIsDisabled = signal(false)
 
 
   public minusItemNumber(){
-    this.itemsNumber.update(val => val - 1)
+    if(this.itemsNumber() === 1){
+      this.btnIsDisabled.set(true)
+    }else{
+      this.itemsNumber.update(val => val - 1)
+    }
   }
 
   public addItemNumber(){
     this.itemsNumber.update(val => val + 1)
+    if(this.itemsNumber() !== 1){
+      this.btnIsDisabled.set(false)
+    }
   }
 }
