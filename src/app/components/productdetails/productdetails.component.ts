@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-productdetails',
@@ -9,11 +10,14 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductdetailsComponent {
 
+  public itemsNumber = signal(1)
+
+
   public minusItemNumber(){
-    
+    this.itemsNumber.update(val => val - 1)
   }
 
   public addItemNumber(){
-
+    this.itemsNumber.update(val => val + 1)
   }
 }
