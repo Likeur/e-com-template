@@ -75,15 +75,19 @@
   [ngClass]="{ 'scale-0 opacity-0': isCartOpen === false }"
   class="bg-white/50 dark:bg-gray-950/50 inset-0 backdrop-blur-lg h-dvh w-screen fixed duration-300 origin-top grid place-content-center z-50"
 >
-  <div class="card variant-mixed h-[70vh] w-[90vw] lg:w-[80vw]">
+  <div class="card variant-mixed h-[70vh] w-[90vw] lg:w-[80vw] flex flex-col justify-between gap-4">
     <div class="flex items-center justify-between border-b pb-2">
       <h3 class="text-xl font-semibold">Your Cart</h3>
       <button (click)="togglecart()" class="btn variant-outlined sz-lg">
         <span>Close</span>
       </button>
     </div>
-    <div>
+    <div class="mt-4 h-full">
       <app-cartlist />
+    </div>
+
+    <div>
+      <button class="btn variant-primary sz-lg rounded-full px-8">Buy Now</button>
     </div>
   </div>
 </section>
