@@ -9,4 +9,11 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductdetailsComponent {
 
+  public minusItemNumber(){
+    
+  }
+
+  public addItemNumber(){
+
+  }
 }
