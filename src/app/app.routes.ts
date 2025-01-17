@@ -8,8 +8,18 @@ export const routes: Routes = [
     },
     {
         path:'login',
-        title:'login at ecomtemplate',
+        title:'login to ecomtemplate',
         loadComponent: () => import("./components/auth/login/login.component")
+    },
+    {
+        path:'sign-up',
+        title:'Sign up to ecomtemplate',
+        loadComponent: () => import("./components/auth/sign-up/sign-up.component")
+    },
+    {
+        path:'details',
+        title:'Product details',
+        loadComponent: () => import("./layout/product-page/product-page.component")
     },
     {
         path:'',
