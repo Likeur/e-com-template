@@ -3,7 +3,7 @@
 >
   <div class="flex items-center gap-4">
     <div>
-      <a href="">E-com</a>
+      <a href="" class="text-2xl font-semibold">GAKR</a>
     </div>
     <nav class="border-l pl-5">
       <ul class="flex items-center gap-5">
@@ -18,31 +18,10 @@
   <div class="flex items-center gap-4">
     <div class="flex items-center gap-2">
       <button
-        class="btn variant-outlined sz-md w-40 flex justify-between items-center"
+        class="flex uppercase justify-between items-center"
       >
         <div class="flex items-center gap-2">
-          <span
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
-          </span>
           <span>Search</span>
-        </div>
-        <div class="">
-          <p class="kbd">
-            <span class="">S</span>
-          </p>
         </div>
       </button>
     </div>
@@ -59,10 +38,10 @@
 
 <!-- cart -->
 <section
-  [ngClass]="{ 'scale-0 opacity-0': isCartOpen === false }"
-  class="bg-white/50 dark:bg-gray-950/50 inset-0 backdrop-blur-lg h-dvh w-screen fixed duration-300 origin-top grid place-content-center z-50"
+  [ngClass]="{ 'opacity-0 z-0': isCartOpen === false ,'z-50': isCartOpen === true }"
+  class="fixed duration-300 h-screen w-screen inset-0 bg-white/40 dark:bg-gray-950/30 lg:flex lg:justify-end lg:items-center lg:pr-10"
 >
-  <div class="card variant-mixed h-[70vh] w-[90vw] lg:w-[80vw] flex flex-col justify-between gap-4">
+  <div [ngClass]="{ 'scale-0': isCartOpen === false }" class="bg-black h-[70vh] w-[90vw] lg:w-[40vw] duration-300  origin-top-right flex p-10 flex-col justify-between gap-4">
     <div class="flex items-center justify-between border-b pb-2">
       <h3 class="text-xl font-semibold">Your Cart</h3>
       <button (click)="togglecart()" class="btn variant-outlined sz-lg">
